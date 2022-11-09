@@ -27,3 +27,19 @@ header li {
 header ul a li {
     color: black;
 }
+
+.grafico1 {
+    width: 40%;
+    height: 40vh;
+    display: flex;
+}
+
+.grafico2 {
+    width: 40%;
+    height: 40vh;
+}
+
+.grafico3 {
+    width: 40%;
+    height: 40vh;
+}
