@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script></script>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="icon" type="imagem/png" href="./assets/logo.png">
+    
+</head>
+<body>
+<!-- HEADER -->
+
+    <header>
+      <img src="./assets/logo.png" width="80px" alt="">
+      <ul>
+        <a href="perfil.html"><li>Perfil</li></a>
+        <a href="#contato"><li>Contato</li></a>
+        <li>|</li>
+        <a href="index.html"><li>Sair</li></a>
+      </ul>
+    </header>
+
+<!-- DASHBOARD -->
+
+  <div>
+        <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+    </div>
+
+    <div>
+        <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+    </div>
+
+    <div>
+      <canvas id="myChart3" style="position: relative; height:40vh; width:40vw"></canvas>
+  </div>
+
+<!-- FOOTER -->
+
+  <div class="footer" id="contato">
+    <div class="contato">
+        <img src="./assets/logo.png" width="100px" alt="">
+    </div>
+    <div class="divcontato">
+        <h3><u>Contatos</u></h3>
+    </div>    
+    <div class="social1">
+        <p><img src="./assets/facebook.png" width="15px"> @LucasBonfim <br><br>
+        <img src="./assets/instagram (1).png" width="15px"> @llucasbonfim_</p>
+    </div>       
+    <div class="social2">
+        <p><img src="./assets/twitter.png" width="15px"> @llucasbonfim_ <br><br>
+        <img src="./assets/logotipo-do-linkedin.png" width="15px"> @Lucas_Bonfim</p>
+    </div>
+    <div class="social3">
+        <p><img src="./assets/whatsapp.png" width="15px"> (11) 94599 - 5490 <br><br>
+        <img src="./assets/o-email.png" width="15px"> lucas.bsilva@sptech.school</p>
+    </div>
+    <div class="final">
+        <p>Desenvolvido por um aluno SPtecher - &copy; Copyright</p>
+    </div>
+  </div>
+  </div>
+
+</body>
+<script>
+    const labels = [ 
+        'Shipment',
+        'Shoot House',
+        'Crash',
+        'Rust',
+        'Hijacked',
+        'Nuketown',
+    ];
+  
+    const data = { 
+      labels: labels,
+      datasets: [{
+        label: 'Mapas mais usados',
+        backgroundColor: 'rgb(0, 255, 0)',
+        borderColor: 'rgb(0, 255, 0)',
+        data: [80, 70, 35, 60, 55, 95],
+      }
+    ]
+    };
+
+    const labels2 = [ 
+        'Assault',
+        'SMG',
+        'Precisão',
+        'Pistola',
+        'Escopeta',
+        'Corpo a Corpo',
+    ];
+  
+    const data2 = { 
+      labels: labels2,
+      datasets: [{
+        label: 'Armas mais usadas',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [20, 95, 70, 10, 35, 50],
+      }
+    ]
+    };
+  
+    const labels3 = [ 
+        'Price',
+        'Ghost',
+        'Soap',
+        'Rose',
+        'Snoop Dogg',
+        'Mara',
+    ];
+  
+    const data3 = { 
+      labels: labels3,
+      datasets: [{
+        label: 'Operadores mais usados',
+        backgroundColor: 'rgb(255,0,255)',
+        borderColor: 'rgb(255,0,255)',
+        data: [25, 75, 60, 90, 100, 45],
+      }
+    ]
+    };
+    const config1 = {
+      type: 'bar',
+      data: data,
+      options: {}
+    };
+
+    const config2 = {
+      type: 'bar',
+      data: data2,
+      options: {}
+    };
+
+    const config3 = {
+      type: 'bar',
+      data: data3,
+      options: {}
+    };
+  </script>
+
+    <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config1
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+
+    const myChart3 = new Chart(
+      document.getElementById('myChart3'),
+      config3
+    );
+    </script>
+</html>

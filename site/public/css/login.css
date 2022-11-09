@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: white; 
+    color: black;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header img {
+    left: 60%;
+    top: 4700px;
+}
+
+header li {
+    display: inline-block;
+    margin: 20px;
+}
+
+header ul a li {
+    color: black;
+}
+
+.banner {
+    background-color: #343A40;
+    padding: 20px;
+    height: 90vh;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    margin-left: 17%;
+}
+
+.campos {
+    width: 70vh;
+    margin-top: 5%;
+    margin-left: 20%;
+    padding: 0 0 0 10px;
+    border-radius: 10px;
+}
+
+.campo {
+    width: 40vh;
+    height: 3.5vh;
+    padding: 0 0 0 5px;
+    margin-top: 20px;
+}
+
+.campo input {
+    width: 40vh;
+    height: 3.5vh;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+}
+
+button {
+    width: 12vh;
+    height: 5vh;
+    background-color: white;
+    color: black;
+    margin-left: 27.5%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+label {
+    color: white;
+}
+
+.container img {
+    margin-top: -20%;
+    width: 70vh;
+    height: 70vh;
+    margin-left: 55%;
+}
+
+.formulario {
+    margin-top: 10%;
+}
