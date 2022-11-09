@@ -58,10 +58,6 @@
            
             <br><button onclick="cadastro()">Cadastre-se</button>
 
-            <div id="div_aguardar" class="loading-div">
-                <img src="./assets/circle-loading.gif" id="loading-gif">
-            </div>
-
             <div id="div_erros_login">
                 
             <img src="./assets/bbb.png" width="200px" alt="">
@@ -108,15 +104,17 @@
     var senhaVar = senha.value;
     var confirmacaoVar = confirmacao.value;
 
-    if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+   
 
-        finalizarAguardar();
+    if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == "") {
+        // cardErro.style.display = "block"
+        // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        // finalizarAguardar();
         return false;
     }
     else {
-        setInterval(sumirMensagem, 5000)
+        // setInterval(sumirMensagem, 5000)
     }
 
     // Enviando o valor da nova input
@@ -138,28 +136,28 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            cardErro.style.display = "block";
+            // cardErro.style.display = "block";
 
-            mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+            console.log( "Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
-            setTimeout(() => {
-                window.location = "login.html";
-            }, "2000")
+            // setTimeout(() => {
+            //     window.location = "login.html";
+            // }, "2000")
             
-            limparFormulario();
-            finalizarAguardar();
+            // limparFormulario();
+            // finalizarAguardar();
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
+        // finalizarAguardar();
     });
 
     return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
 </script>
