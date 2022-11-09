@@ -31,12 +31,14 @@ header ul a li {
 
 .sobre {
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     background-color: #343A40;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .texto1 {
-    margin: 0;
     font-size: 350%;
     align-items: center;
     color: white;
@@ -49,11 +51,12 @@ header ul a li {
 }
 
 .completo {
-    height: 15vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-left: 10vh;
+    justify-content: space-between;
 }
 
 .img {
