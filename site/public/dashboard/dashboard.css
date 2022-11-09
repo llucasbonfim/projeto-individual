@@ -31,15 +31,18 @@ header ul a li {
 .grafico1 {
     width: 40%;
     height: 40vh;
-    display: flex;
+    margin-left: 5%;
 }
 
 .grafico2 {
     width: 40%;
     height: 40vh;
+    margin-left: 50%;
+    margin-top: -19.6%;
 }
 
 .grafico3 {
     width: 40%;
     height: 40vh;
+    margin-left: 30%;
 }
