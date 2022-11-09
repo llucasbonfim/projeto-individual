@@ -6,15 +6,17 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE callstudents;
 
-USE aquatech;
+USE callstudents;
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+	idusuario INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(45),
+	sobrenome VARCHAR(45),
+	email VARCHAR(45),
+	senha VARCHAR(45),
+	CONSTRAINT chkemail CHECK ( email LIKE '%@%')
 );
 
 CREATE TABLE aviso (
