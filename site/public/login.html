@@ -44,9 +44,7 @@
             <img src="./assets/a7805cf6-cb08-4a19-b1c4-fefb275bc3a1-removebg-preview.png" width="150px" alt="">
         </div>
 
-        <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif">
-        </div>
+     
 
     </div>
 
@@ -81,15 +79,15 @@
 <script>
    
    function entrar() {
-        aguardar();
+     //   aguardar();
 
         var emailVar = email.value;
         var senhaVar = senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
+         //   cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+           // finalizarAguardar();
             return false;
         }
         else {
@@ -134,7 +132,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                 //   finalizarAguardar(texto);
                 });
             }
 
@@ -146,7 +144,7 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+      //  cardErro.style.display = "none"
     }
 
 </script>
