@@ -42,7 +42,7 @@ h1 {
 
 .campos {
     width: 70vh;
-    margin-top: 5%;
+    margin-top: 0%;
     margin-left: 18%;
 }
 
@@ -58,6 +58,47 @@ h1 {
     padding: 0 0 0 5px;
 }
 
+.select {
+    width: 70vh;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo select {
+    width: 18vh;
+    height: 5vh;
+    border-radius: 7px;
+    padding: 0 0 0 5px;
+}
+
+.campo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo2 select {
+    width: 18vh;
+    height: 5vh;
+    border-radius: 7px;
+    padding: 0 0 0 5px;
+}
+
+.campo3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo3 select {
+    width: 40vh;
+    height: 5vh;
+    border-radius: 7px;
+    padding: 0 0 0 5px;
+}
 button {
     width: 15vh;
     height: 5vh;
