@@ -54,7 +54,7 @@ header ul a li :hover {
 .divisao {
     width: 100%;
     height: 5px;
-    background-color: black;
+    background-color: white;
     content: '';
     margin-top: 15px;
 }
@@ -69,7 +69,9 @@ header ul a li :hover {
 
 .titulo1 {
     margin-top: 15px;
+    color: white;
 }
+
 .caixa1 {
     display: flex;
     flex-direction: row;
