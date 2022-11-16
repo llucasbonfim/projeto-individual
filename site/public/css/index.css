@@ -43,6 +43,14 @@ header ul a li :hover {
     height: 100vh;
 }
 
+.banner h1 {
+    color: white;
+}
+
+.banner p {
+    color: white;
+}
+
 .divisao {
     width: 100%;
     height: 5px;
