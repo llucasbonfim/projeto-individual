@@ -16,6 +16,9 @@ CREATE TABLE usuario (
 	sobrenome VARCHAR(45),
 	email VARCHAR(45),
 	senha VARCHAR(45),
+	mapa varchar(45),
+	arma varchar(45),
+	operador varchar(45),
 	CONSTRAINT chkemail CHECK ( email LIKE '%@%')
 );
 

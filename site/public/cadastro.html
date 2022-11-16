@@ -142,8 +142,11 @@
     var emailVar = email.value;
     var senhaVar = senha.value;
     var confirmacaoVar = confirmacao.value;
+    var mapaVar = sel_mapa.value;
+    var armaVar = sel_arma.value;
+    var operadorVar = sel_operador.value;
 
-    if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == "") {
+    if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == "" || mapaVar == "" || armaVar == "" || operadorVar == "") {
       //  cardErro.style.display = "block"
         mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -166,7 +169,10 @@
             nomeServer: nomeVar,
             sobrenomeServer: sobrenomeVar,
             emailServer: emailVar,
-            senhaServer: senhaVar
+            senhaServer: senhaVar,
+            mapaServer: mapaVar,
+            armaServer: armaVar,
+            operadorServer: operadorVar
         })
     }).then(function (resposta) {
 
