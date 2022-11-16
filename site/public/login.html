@@ -83,7 +83,7 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
         else {
@@ -117,7 +117,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard.html";
+                        window.location = "./dashboard/dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -128,7 +128,7 @@
 
             resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                 //  finalizarAguardar(texto);
                });
             }
 
@@ -140,7 +140,7 @@
     }
 
     function sumirMensagem() {
-       cardErro.style.display = "none"
+     cardErro.style.display = "none"
     }
 
 </script>
