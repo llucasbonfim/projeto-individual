@@ -47,6 +47,11 @@ header ul a li :hover {
 
 .banner h1 {
     color: white;
+    margin-top: 20%;
+}
+
+.imagem {
+    margin-top: 10%;
 }
 
 .banner p {
