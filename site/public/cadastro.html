@@ -60,36 +60,36 @@
                         <label for="">Mapa:</label>
                         <select id="sel_mapa">
                             <option value="">-- SELECIONE --</option>
-                            <option value="Shipment">Shipment (Inglaterra)</option>
-                            <option value="Shoot House">Shoot House (Estados Unidos)</option>
-                            <option value="Crash">Crash (Rússia)</option>
-                            <option value="Rust">Rust (Egito)</option>
-                            <option value="Hijacked">Hijacked (Costa Rica)</option>
-                            <option value="Nuketown">Nuketown (Canadá)</option>
+                            <option value="1">Shipment (Inglaterra)</option>
+                            <option value="4">Shoot House (Estados Unidos)</option>
+                            <option value="2">Crash (Rússia)</option>
+                            <option value="3">Rust (Egito)</option>
+                            <option value="5">Hijacked (Costa Rica)</option>
+                            <option value="6">Nuketown (Canadá)</option>
                         </select>
                     </div>
                     <div class="campo2">
                         <label for="">Arma:</label>
                         <select id="sel_arma">
                             <option value="">-- SELECIONE --</option>
-                            <option value="Assault">Assault (M)</option>
-                            <option value="Smg">Smg (C)</option>
-                            <option value="Precisão">Precisão (L)</option>
-                            <option value="Pistola">Pistola (C)</option>
-                            <option value="Escopeta">Escopeta (C)</option>
-                            <option value="Corpo a Corpo">Corpo a Corpo (C)</option>
+                            <option value="1">Assault (M)</option>
+                            <option value="2">Smg (C)</option>
+                            <option value="3">Precisão (L)</option>
+                            <option value="4">Pistola (C)</option>
+                            <option value="5">Escopeta (C)</option>
+                            <option value="6">Corpo a Corpo (C)</option>
                         </select>
                     </div>
                     <div class="campo3">
                         <label for="">Operador:</label>
                         <select id="sel_operador">
                             <option value=""> -- SELECIONE -- </option>
-                            <option value="Price">Price</option>
-                            <option value="Ghost">Ghost</option>
-                            <option value="Soap">Soap</option>
-                            <option value="Rose">Rose</option>
-                            <option value="Snoop Dogg">Snoop Dogg</option>
-                            <option value="Mara">Mara</option>
+                            <option value="1">Price</option>
+                            <option value="2">Ghost</option>
+                            <option value="3">Soap</option>
+                            <option value="4">Rose</option>
+                            <option value="5">Snoop Dogg</option>
+                            <option value="6">Mara</option>
                         </select>
                     </div>  
                 </div>
@@ -142,9 +142,9 @@
     var emailVar = email.value;
     var senhaVar = senha.value;
     var confirmacaoVar = confirmacao.value;
-    var mapaVar = sel_mapa.value;
-    var armaVar = sel_arma.value;
-    var operadorVar = sel_operador.value;
+    var mapaVar = Number(sel_mapa.value);
+    var armaVar = Number(sel_arma.value);
+    var operadorVar = Number(sel_operador.value);
 
     if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == "" || mapaVar == "" || armaVar == "" || operadorVar == "") {
       //  cardErro.style.display = "block"

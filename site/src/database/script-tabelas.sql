@@ -10,16 +10,19 @@ CREATE DATABASE callstudents;
 
 USE callstudents;
 
-CREATE TABLE usuario (
-	idusuario INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(45),
-	sobrenome VARCHAR(45),
-	email VARCHAR(45),
-	senha VARCHAR(45),
-	mapa varchar(45),
-	arma varchar(45),
-	operador varchar(45),
-	CONSTRAINT chkemail CHECK ( email LIKE '%@%')
+create table usuario (
+idusuario int primary key auto_increment,
+nome varchar(45),
+sobrenome varchar(45),
+email varchar(45),
+senha varchar(45),
+fkmapa int,
+foreign key (fkmapa) references mapa(idmapa),
+fkarma int,
+foreign key (fkarma) references arma(idarma),
+fkoperador int,
+foreign key (fkoperador) references operador(idoperador),
+constraint chkemail check ( email like '%@%') 
 );
 
 CREATE TABLE aviso (
