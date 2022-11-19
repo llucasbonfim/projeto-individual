@@ -14,7 +14,7 @@ function buscarUltimasMedidas(idmapa, limite_linhas) {
                     where fk_aquario = ${idmapa}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from mapa`;
+        instrucaoSql = `select concat(idmapa) as mapa, nome_mapa from mapa`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -38,7 +38,7 @@ function buscarMedidasEmTempoReal(idmapa) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from mapa`;
+        instrucaoSql = `select concat(idmapa) as mapa, nome_mapa from mapa`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -63,7 +63,7 @@ function buscarUltimasMedidas2(idarma, limite_linhas) {
                     where fk_aquario = ${idarma}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from arma`;
+        instrucaoSql = `select concat(idarma) as arma, nome_arma from arma`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -87,7 +87,7 @@ function buscarMedidasEmTempoReal2(idarma) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from arma`;
+        instrucaoSql = `select concat(idarma) as arma, nome_arma from arma`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -111,7 +111,7 @@ function buscarUltimasMedidas3(idoperador, limite_linhas) {
                     where fk_aquario = ${idoperador}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from operador`;
+        instrucaoSql = `select concat(idoperador) as operador, nome_operador from operador`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -135,7 +135,7 @@ function buscarMedidasEmTempoReal3(idoperador) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select * from operador`;
+        instrucaoSql = `select concat(idoperador) as operador, nome_operador from operador`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
