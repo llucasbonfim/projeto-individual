@@ -14,7 +14,7 @@ function buscarUltimasMedidas(idmapa, limite_linhas) {
                     where fk_aquario = ${idmapa}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select concat(idmapa) as mapa, nome_mapa from mapa`;
+        instrucaoSql = `select count(fkmapa) 'votos', nome_mapa 'mapa' from usuario join mapa on idmapa = fkmapa group by nome_mapa;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

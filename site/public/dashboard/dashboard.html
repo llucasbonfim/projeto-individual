@@ -83,9 +83,10 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idmapa);
+                    plotarGrafico(resposta);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -99,7 +100,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idmapa) {
+    function plotarGrafico(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -124,8 +125,8 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.nome_mapa);
-            dados.datasets[0].data.push(registro.mapa);
+            labels.push(registro.mapa);
+            dados.datasets[0].data.push(registro.votos);
         }
         
         console.log('----------------------------------------------')
