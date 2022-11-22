@@ -48,7 +48,7 @@
     </div>
     <div class="divcontato">
         <h3><u>Contatos</u></h3>
-    </div>    
+    </div>
     <div class="social1">
         <p><img src="../assets/facebook.png" width="15px"> @LucasBonfim <br><br>
         <img src="../assets/instagram (1).png" width="15px"> @llucasbonfim_</p>
@@ -230,7 +230,7 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico2(idarma, dados, myChart), 2000);
+       // setTimeout(() => atualizarGrafico2(idarma, dados, myChart), 2000);
     }
 
 
@@ -246,6 +246,7 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    
                     resposta.reverse();
 
                     plotarGrafico3(resposta);
@@ -262,7 +263,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico3(resposta, idoperador) {
+    function plotarGrafico3(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -311,6 +312,6 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico3(idoperador, dados, myChart), 2000);
+       // setTimeout(() => atualizarGrafico3(idoperador, dados, myChart), 2000);
     }
 </script>
