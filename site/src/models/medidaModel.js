@@ -63,7 +63,7 @@ function buscarUltimasMedidas2(idarma, limite_linhas) {
                     where fk_aquario = ${idarma}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select concat(idarma) as arma, nome_arma from arma`;
+        instrucaoSql = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -111,7 +111,7 @@ function buscarUltimasMedidas3(idoperador, limite_linhas) {
                     where fk_aquario = ${idoperador}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select concat(idoperador) as operador, nome_operador from operador`;
+        instrucaoSql = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
