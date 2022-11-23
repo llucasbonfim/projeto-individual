@@ -48,7 +48,6 @@ function buscarMedidasEmTempoReal(idmapa) {
     return database.executar(instrucaoSql);
 }
 
-
 function buscarUltimasMedidas2(idarma, limite_linhas) {
 
     instrucaoSql = ''

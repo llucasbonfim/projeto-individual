@@ -154,7 +154,7 @@
 
 
     function obterDadosGrafico2(idarma) {
-       // alterarTitulo(idarma)
+       // alterarTitulo(idmapa)
 
         // if (proximaAtualizacao != undefined) {
         //     clearTimeout(proximaAtualizacao);
@@ -164,7 +164,7 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
+                    
                     resposta.reverse();
 
                     plotarGrafico2(resposta);
@@ -185,11 +185,11 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = [];
+        let labels2 = [];
         
         // Criando estrutura para plotar gráfico - dados
         let dados = {
-            labels: labels,
+            labels: labels2,
             datasets: [{
                 label: 'Armas mais usadas',
                 data: [],
@@ -200,14 +200,14 @@
         };
         
         console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico2" e passados para "plotarGrafico2":')
         console.log(resposta)
         
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.arma);
-            dados.datasets[0].data.push(registro.votos)
+            dados.datasets[0].data.push(registro.votos);
         }
         
         console.log('----------------------------------------------')
@@ -219,24 +219,23 @@
         console.log('----------------------------------------------')
         
         // Criando estrutura para plotar gráfico - config
-        const config = {
+        const config2 = {
             type: 'line',
             data: dados,
         };
 
         // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById('myChart'),
-            config
+        let myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config2
         );
 
-       // setTimeout(() => atualizarGrafico2(idarma, dados, myChart), 2000);
+        // setTimeout(() => atualizarGrafico(idarma, dados, myChart), 2000);
     }
+    
 
-
-   
     function obterDadosGrafico3(idoperador) {
-       // alterarTitulo(idoperador)
+       // alterarTitulo(idmapa)
 
         // if (proximaAtualizacao != undefined) {
         //     clearTimeout(proximaAtualizacao);
@@ -267,11 +266,11 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = [];
+        let labels3 = [];
         
         // Criando estrutura para plotar gráfico - dados
         let dados = {
-            labels: labels,
+            labels: labels3,
             datasets: [{
                 label: 'Operadores mais usados',
                 data: [],
@@ -282,14 +281,14 @@
         };
         
         console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico3" e passados para "plotarGrafico3":')
         console.log(resposta)
         
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.operador);
-            dados.datasets[0].data.push(registro.votos)
+            dados.datasets[0].data.push(registro.votos);
         }
         
         console.log('----------------------------------------------')
@@ -301,17 +300,17 @@
         console.log('----------------------------------------------')
         
         // Criando estrutura para plotar gráfico - config
-        const config = {
+        const config3 = {
             type: 'line',
             data: dados,
         };
 
         // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById('myChart'),
-            config
+        let myChart3 = new Chart(
+            document.getElementById('myChart3'),
+            config3
         );
 
-       // setTimeout(() => atualizarGrafico3(idoperador, dados, myChart), 2000);
+        // setTimeout(() => atualizarGrafico(idoperador, dados, myChart), 2000);
     }
 </script>

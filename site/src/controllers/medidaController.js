@@ -49,7 +49,7 @@ function buscarUltimasMedidas2(req, res) {
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
-    medidaModel.buscarUltimasMedidas(idarma, limite_linhas).then(function (resultado) {
+    medidaModel.buscarUltimasMedidas2(idarma, limite_linhas).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -69,7 +69,7 @@ function buscarMedidasEmTempoReal2(req, res) {
 
     console.log(`Recuperando medidas em tempo real`);
 
-    medidaModel.buscarMedidasEmTempoReal(idarma).then(function (resultado) {
+    medidaModel.buscarMedidasEmTempoReal2(idarma).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -82,6 +82,7 @@ function buscarMedidasEmTempoReal2(req, res) {
     });
 }
 
+
 function buscarUltimasMedidas3(req, res) {
 
     const limite_linhas = 7;
@@ -90,7 +91,7 @@ function buscarUltimasMedidas3(req, res) {
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
-    medidaModel.buscarUltimasMedidas(idoperador, limite_linhas).then(function (resultado) {
+    medidaModel.buscarUltimasMedidas3(idoperador, limite_linhas).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -110,7 +111,7 @@ function buscarMedidasEmTempoReal3(req, res) {
 
     console.log(`Recuperando medidas em tempo real`);
 
-    medidaModel.buscarMedidasEmTempoReal(idoperador).then(function (resultado) {
+    medidaModel.buscarMedidasEmTempoReal3(idoperador).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
