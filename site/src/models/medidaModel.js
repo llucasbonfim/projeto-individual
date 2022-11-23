@@ -50,12 +50,12 @@ function buscarMedidasEmTempoReal(idmapa) {
 
 
 
-function buscarUltimasMedidas2(idarma, limite_linhas) {
+function buscarUltimasMedidas2(idarma, limite_linhas2) {
 
-    instrucaoSql = ''
+    instrucaoSql2 = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top ${limite_linhas}
+        instrucaoSql2 = `select top ${limite_linhas2}
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
                         momento,
@@ -64,22 +64,22 @@ function buscarUltimasMedidas2(idarma, limite_linhas) {
                     where fk_aquario = ${idarma}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
+        instrucaoSql2 = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + instrucaoSql2);
+    return database.executar(instrucaoSql2);
 }
 
 function buscarMedidasEmTempoReal2(idarma) {
 
-    instrucaoSql = ''
+    instrucaoSql2 = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top 1
+        instrucaoSql2 = `select top 1
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
                         CONVERT(varchar, momento, 108) as momento_grafico, 
@@ -88,25 +88,25 @@ function buscarMedidasEmTempoReal2(idarma) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
+        instrucaoSql2 = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + instrucaoSql2);
+    return database.executar(instrucaoSql2);
 }
 
 
 
 
-function buscarUltimasMedidas3(idoperador, limite_linhas) {
+function buscarUltimasMedidas3(idoperador, limite_linhas3) {
 
-    instrucaoSql = ''
+    instrucaoSql3 = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top ${limite_linhas}
+        instrucaoSql3 = `select top ${limite_linhas3}
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
                         momento,
@@ -115,22 +115,22 @@ function buscarUltimasMedidas3(idoperador, limite_linhas) {
                     where fk_aquario = ${idoperador}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
+        instrucaoSql3 = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + instrucaoSql3);
+    return database.executar(instrucaoSql3);
 }
 
 function buscarMedidasEmTempoReal3(idoperador) {
 
-    instrucaoSql = ''
+    instrucaoSql3 = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top 1
+        instrucaoSql3 = `select top 1
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
                         CONVERT(varchar, momento, 108) as momento_grafico, 
@@ -139,14 +139,14 @@ function buscarMedidasEmTempoReal3(idoperador) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
+        instrucaoSql3 = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + instrucaoSql3);
+    return database.executar(instrucaoSql3);
 }
 
 module.exports = {

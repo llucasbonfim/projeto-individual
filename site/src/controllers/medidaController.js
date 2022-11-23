@@ -45,7 +45,7 @@ function buscarMedidasEmTempoReal(req, res) {
 
 function buscarUltimasMedidas2(req, res) {
 
-    const limite_linhas = 7;
+    const limite_linhas2 = 7;
 
     var ididarma = req.params.idarma;
 
@@ -88,7 +88,7 @@ function buscarMedidasEmTempoReal2(req, res) {
 
 function buscarUltimasMedidas3(req, res) {
 
-    const limite_linhas = 7;
+    const limite_linhas3 = 7;
 
     var idoperador = req.params.idoperador;
 
