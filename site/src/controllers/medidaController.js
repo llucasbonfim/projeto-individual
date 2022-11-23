@@ -127,5 +127,4 @@ function buscarMedidasEmTempoReal3(req, res) {
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal
-
 }
