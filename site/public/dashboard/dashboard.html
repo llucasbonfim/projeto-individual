@@ -152,5 +152,169 @@
         // setTimeout(() => atualizarGrafico(idmapa, dados, myChart), 2000);
     }    
 
+
+    window.onload=obterDadosGrafico2()
+
+    function obterDadosGrafico2(idarma) {
+        // alterarTitulo(idmapa)
+
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch(`/medidas/ultimas/${idarma}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    
+                    resposta.reverse();
+
+                    plotarGrafico2(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico2(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels2 = [];
+        
+        // Criando estrutura para plotar gráfico - dados
+        let dados2 = {
+            labels: labels2,
+            datasets: [{
+                label: 'Armas mais usadas',
+                data2: [],
+                fill: false,
+                borderColor: 'rgb(255, 0, 0)',
+                tension: 0.1
+            },]
+        };
+        
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico2" e passados para "plotarGrafico2":')
+        console.log(resposta)
+        
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels2.push(registro.arma);
+            dados2.datasets[0].data2.push(registro.votos);
+        }
+        
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels2)
+        console.log('Dados:')
+        console.log(dados2.datasets)
+        console.log('----------------------------------------------')
+        
+        // Criando estrutura para plotar gráfico - config
+        const config2 = {
+            type: 'line',
+            data: dados2,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config2
+        );
+
+        // setTimeout(() => atualizarGrafico(idmapa, dados, myChart), 2000);
+    }  
     
+    
+    window.onload=obterDadosGrafico3()
+
+    function obterDadosGrafico3(idoperador) {
+        // alterarTitulo(idmapa)
+
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch(`/medidas/ultimas/${idoperador}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    
+                    resposta.reverse();
+
+                    plotarGrafico3(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico3(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels3 = [];
+        
+        // Criando estrutura para plotar gráfico - dados
+        let dados3 = {
+            labels: labels3,
+            datasets: [{
+                label: 'Operadores mais usados',
+                data: [],
+                fill: false,
+                borderColor: 'rgb(255, 0, 0)',
+                tension: 0.1
+            },]
+        };
+        
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico3" e passados para "plotarGrafico3":')
+        console.log(resposta)
+        
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels3.push(registro.operador);
+            dados3.datasets[0].data.push(registro.votos);
+        }
+        
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels3)
+        console.log('Dados:')
+        console.log(dados3.datasets)
+        console.log('----------------------------------------------')
+        
+        // Criando estrutura para plotar gráfico - config
+        const config3 = {
+            type: 'line',
+            data: dados3,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart3 = new Chart(
+            document.getElementById('myChart3'),
+            config3
+        );
+
+        // setTimeout(() => atualizarGrafico(idmapa, dados, myChart), 2000);
+    }    
 </script>
