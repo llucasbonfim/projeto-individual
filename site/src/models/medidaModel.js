@@ -64,7 +64,7 @@ function buscarUltimasMedidas2(idarma, limite_linhas2) {
                     where fk_aquario = ${idarma}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql2 = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
+        instrucaoSql2 = `select count(fkarma) 'votos2', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -88,7 +88,7 @@ function buscarMedidasEmTempoReal2(idarma) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql2 = `select count(fkarma) 'votos', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
+        instrucaoSql2 = `select count(fkarma) 'votos2', nome_arma 'arma' from usuario join arma on idarma = fkarma group by nome_arma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -115,7 +115,7 @@ function buscarUltimasMedidas3(idoperador, limite_linhas3) {
                     where fk_aquario = ${idoperador}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql3 = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
+        instrucaoSql3 = `select count(fkoperador) 'votos3', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -139,7 +139,7 @@ function buscarMedidasEmTempoReal3(idoperador) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql3 = `select count(fkoperador) 'votos', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
+        instrucaoSql3 = `select count(fkoperador) 'votos3', nome_operador 'operador' from usuario join operador on idoperador = fkoperador group by nome_operador;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

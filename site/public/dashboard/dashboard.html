@@ -194,7 +194,7 @@
             labels: labels2,
             datasets: [{
                 label: 'Armas mais usadas',
-                data2: [],
+                data: [],
                 fill: false,
                 borderColor: 'rgb(255, 0, 0)',
                 tension: 0.1
@@ -209,7 +209,7 @@
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels2.push(registro.arma);
-            dados2.datasets[0].data2.push(registro.votos);
+            dados2.datasets[0].data.push(registro.votos2);
         }
         
         console.log('----------------------------------------------')
@@ -292,7 +292,7 @@
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels3.push(registro.operador);
-            dados3.datasets[0].data.push(registro.votos);
+            dados3.datasets[0].data.push(registro.votos3);
         }
         
         console.log('----------------------------------------------')
