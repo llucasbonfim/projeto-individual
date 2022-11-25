@@ -71,6 +71,8 @@
 </html>
 <script>
   window.onload=obterDadosGrafico()
+  window.onload=obterDadosGrafico2()
+  window.onload=obterDadosGrafico3()
 
   function obterDadosGrafico(idmapa) {
        // alterarTitulo(idmapa)
@@ -87,6 +89,7 @@
                     resposta.reverse();
 
                     plotarGrafico(resposta);
+
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -114,6 +117,7 @@
                 data: [],
                 fill: false,
                 borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: 'rgb(255, 0, 0)',
                 tension: 0.1
             },]
         };
@@ -139,7 +143,7 @@
         
         // Criando estrutura para plotar gráfico - config
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dados,
         };
 
@@ -149,11 +153,12 @@
             config
         );
 
+        
         // setTimeout(() => atualizarGrafico(idmapa, dados, myChart), 2000);
     }    
 
 
-    window.onload=obterDadosGrafico2()
+    
 
     function obterDadosGrafico2(idarma) {
         // alterarTitulo(idmapa)
@@ -162,14 +167,14 @@
         //     clearTimeout(proximaAtualizacao);
         // }
 
-        fetch(`/medidas/ultimas/${idarma}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas2/${idarma}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                response.json().then(function (resposta2) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
                     
-                    resposta.reverse();
+                    resposta2.reverse();
 
-                    plotarGrafico2(resposta);
+                    plotarGrafico2(resposta2);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -183,7 +188,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico2(resposta) {
+    function plotarGrafico2(resposta2) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -197,17 +202,18 @@
                 data: [],
                 fill: false,
                 borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: 'rgb(0, 255, 0)',
                 tension: 0.1
             },]
         };
         
         console.log('----------------------------------------------')
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico2" e passados para "plotarGrafico2":')
-        console.log(resposta)
+        console.log(resposta2)
         
         // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
+        for (i = 0; i < resposta2.length; i++) {
+            var registro = resposta2[i];
             labels2.push(registro.arma);
             dados2.datasets[0].data.push(registro.votos2);
         }
@@ -222,7 +228,7 @@
         
         // Criando estrutura para plotar gráfico - config
         const config2 = {
-            type: 'line',
+            type: 'bar',
             data: dados2,
         };
 
@@ -232,11 +238,12 @@
             config2
         );
 
+        
         // setTimeout(() => atualizarGrafico(idmapa, dados, myChart), 2000);
     }  
     
     
-    window.onload=obterDadosGrafico3()
+    
 
     function obterDadosGrafico3(idoperador) {
         // alterarTitulo(idmapa)
@@ -245,14 +252,14 @@
         //     clearTimeout(proximaAtualizacao);
         // }
 
-        fetch(`/medidas/ultimas/${idoperador}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas3/${idoperador}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                response.json().then(function (resposta3) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta3)}`);
                     
-                    resposta.reverse();
+                    resposta3.reverse();
 
-                    plotarGrafico3(resposta);
+                    plotarGrafico3(resposta3);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -266,7 +273,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico3(resposta) {
+    function plotarGrafico3(resposta3) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -280,17 +287,18 @@
                 data: [],
                 fill: false,
                 borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: 'rgb(0, 0, 255)',
                 tension: 0.1
             },]
         };
         
         console.log('----------------------------------------------')
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico3" e passados para "plotarGrafico3":')
-        console.log(resposta)
+        console.log(resposta3)
         
         // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
+        for (i = 0; i < resposta3.length; i++) {
+            var registro = resposta3[i];
             labels3.push(registro.operador);
             dados3.datasets[0].data.push(registro.votos3);
         }
@@ -305,7 +313,7 @@
         
         // Criando estrutura para plotar gráfico - config
         const config3 = {
-            type: 'line',
+            type: 'bar',
             data: dados3,
         };
 
