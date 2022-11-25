@@ -30,6 +30,10 @@ header ul a li {
     color: black;
 }
 
+.geral {
+    background-color: #343A40;
+}
+
 .banner {
     margin-top: 2%;
     display: flex;
