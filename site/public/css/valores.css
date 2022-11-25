@@ -1,3 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    background-color: white; 
+    color: black;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+header img {
+    left: 60%;
+    top: 4700px;
+}
+
+header li {
+    display: inline-block;
+    margin: 20px;
+}
+
+header ul a li {
+    color: black;
+}
+
 .banner {
     display: flex;
     align-items: center;
@@ -20,7 +53,7 @@
 }
 
 .valor2 {
-    margin-top: -27%;
+    margin-top: -15%;
     margin-left: 35%;
     display: flex;
     justify-content: flex-start;
@@ -33,7 +66,7 @@
 }
 
 .valor3 {
-    margin-top: -27%;
+    margin-top: -15%;
     margin-left: 70%;
     display: flex;
     justify-content: flex-start;
