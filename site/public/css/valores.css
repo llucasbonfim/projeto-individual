@@ -30,8 +30,12 @@ header ul a li {
     color: black;
 }
 
+.geral {
+    background-color: #343A40;
+}
+
 .banner {
-    margin-top: 3%;
+    margin-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +43,12 @@ header ul a li {
 
 .banner h1 {
     font-size: 50px;
+    color: white;
+}
+
+.valores h2 {
+    margin-bottom: 10%;
+    font-size: 40px;
 }
 
 .valor1 {
@@ -79,7 +89,14 @@ header ul a li {
     background-color: #CED4DA;
 }
 
-.valores h2 {
-    margin-bottom: 10%;
-    font-size: 40px;
+.valorh1 {
+    margin-top: 10%;
+}
+
+.valorh2 {
+    margin-top: 10%;
+}
+
+.valorh3 {
+    margin-top: 10%;
 }
