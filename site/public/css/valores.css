@@ -30,10 +30,6 @@ header ul a li {
     color: black;
 }
 
-.geral {
-    background-color: #343A40;
-}
-
 .banner {
     margin-top: 2%;
     display: flex;
@@ -43,7 +39,6 @@ header ul a li {
 
 .banner h1 {
     font-size: 50px;
-    color: white;
 }
 
 .valores h2 {
@@ -53,6 +48,7 @@ header ul a li {
 
 .valor1 {
     margin-top: 5%;
+    margin-left: 5%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -65,7 +61,7 @@ header ul a li {
 
 .valor2 {
     margin-top: -27%;
-    margin-left: 35%;
+    margin-left: 36.5%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -78,7 +74,7 @@ header ul a li {
 
 .valor3 {
     margin-top: -27%;
-    margin-left: 70%;
+    margin-left: 68.5%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
