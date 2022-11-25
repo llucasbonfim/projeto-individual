@@ -43,6 +43,19 @@ header ul a li {
 
 .banner h1 {
     font-size: 50px;
+    color: white;
+}
+
+.valores {
+    width: 100%;
+    height: 70vh;
+}
+
+.valores p {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .valores h2 {
