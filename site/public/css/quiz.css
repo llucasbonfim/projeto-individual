@@ -30,19 +30,39 @@ header ul a li {
     color: black;
 }
 
+.banner {
+    background-color: #343A40;
+    width: 100%;
+    height: 80vh;
+}
+
 .titulo {
     margin-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .perguntas {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 37%;
     font-size: 20px;
 }
 
+.campo input {
+    width: 40vh;
+    height: 5vh;
+    border-radius: 7px;
+    padding: 0 0 0 5px;
+}
+
+.campo label {
+    margin-left: -5%;
+}
+
 .campo {
-    
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
