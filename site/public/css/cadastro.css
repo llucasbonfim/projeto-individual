@@ -49,6 +49,7 @@ h1 {
 .campo {
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 
 .campo input {

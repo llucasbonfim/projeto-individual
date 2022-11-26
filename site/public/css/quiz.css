@@ -29,3 +29,20 @@ header li {
 header ul a li {
     color: black;
 }
+
+.titulo {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perguntas {
+    margin-top: 10%;
+    margin-left: 37%;
+    font-size: 20px;
+}
+
+.campo {
+    
+}
