@@ -94,7 +94,7 @@ header ul a li :hover {
     width: 400px;
     height: 400px;
     border-radius: 10px;
-    background-color: #CED4DA;
+    background-color: white;
 }
 
 .shoot {
@@ -106,7 +106,7 @@ header ul a li :hover {
     width: 400px;
     height: 400px;
     border-radius: 10px;
-    background-color: #CED4DA;
+    background-color: white;
 }
 
 .caixa img {
