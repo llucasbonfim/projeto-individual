@@ -52,10 +52,11 @@ header ul a li {
 }
 
 .campo input {
-    width: 40vh;
+    width: 60vh;
     height: 5vh;
     border-radius: 7px;
     padding: 0 0 0 5px;
+    margin-left: -5%;
 }
 
 .campo label {
@@ -66,4 +67,9 @@ header ul a li {
     display: flex;
     flex-direction: column;
     width: 70%;
+}
+
+.img {
+    margin-top: -43.5%;
+    margin-left: 73%;
 }
