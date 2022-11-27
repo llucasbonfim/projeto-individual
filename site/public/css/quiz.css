@@ -78,3 +78,9 @@ header ul a li {
     margin-top: -37%;
     margin-left: 5%;
 }
+
+.button {
+    display: flex;
+    margin-left: 47%;
+    margin-top: -3%;
+}
