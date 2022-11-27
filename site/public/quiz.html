@@ -63,10 +63,9 @@
 
         <div class="button">
             <button onclick="enviar()">Enviar</button>
-        </div>    
+        </div>
     </div>
 
-   
 <!-- FOOTER -->
 
     <div class="footer" id="contato">
@@ -96,5 +95,28 @@
 </body>
 </html>
 <script>
-    
+    var resposta = [] 
+
+    function enviar() {
+        resposta.push(pergunta_1.value)
+        pergunta_1.value = ""
+
+        resposta.push(pergunta_2.value)
+        pergunta_2.value = ""
+
+        resposta.push(pergunta_3.value)
+        pergunta_3.value = ""
+
+        resposta.push(pergunta_4.value)
+        pergunta_4.value = ""
+
+        resposta.push(pergunta_5.value)
+        pergunta_5.value = ""
+
+        if (pergunta_1 == "" || pergunta_2 == "" || pergunta_3 == "" || pergunta_4 == "" || pergunta_5 == "") {
+            alert(`Responda todas as questões!`)
+        } else {
+            alert(`Obrigado por responder!`)
+        }
+    }
 </script>
