@@ -15,7 +15,7 @@
         <img src="./assets/logo.png" width="80px" alt="">
             <ul>
                 <a href="index.html"><li>Home</li></a>
-                <a href="../public/dashboard/dashboard.html"><li>Estatísticas</li></a>
+                <a href="./dashboard/dashboard.html"><li>Estatísticas</li></a>
                 <a href="#contato"><li>Contato</li></a>
                 <li>|</li>
                 <a href="login.html"><li>Sair</li></a>
@@ -64,6 +64,8 @@
         <div class="button">
             <button onclick="enviar()">Enviar</button>
         </div>
+
+        <div class="resultado" id="div_resultado"></div>
     </div>
 
 <!-- FOOTER -->
@@ -99,24 +101,24 @@
 
     function enviar() {
         resposta.push(pergunta_1.value)
-        pergunta_1.value = ""
 
         resposta.push(pergunta_2.value)
-        pergunta_2.value = ""
 
         resposta.push(pergunta_3.value)
-        pergunta_3.value = ""
 
         resposta.push(pergunta_4.value)
-        pergunta_4.value = ""
 
         resposta.push(pergunta_5.value)
-        pergunta_5.value = ""
 
-        if (pergunta_1 == "" || pergunta_2 == "" || pergunta_3 == "" || pergunta_4 == "" || pergunta_5 == "") {
-            alert(`Responda todas as questões!`)
-        } else {
-            alert(`Obrigado por responder!`)
+        for (let index = 0; index < resposta.length; index++) {
+            if (resposta[index] == "") {   
+                alert(`Responda todas as questões!`)
+                break
+            } else {
+                div_resultado.innerHTML = `${resposta[0]} <br> ${resposta[1]} <br> ${resposta[2]} <br> ${resposta[3]} <br> ${resposta[4]}`
+            }
+            
         }
+        console.log(resposta) 
     }
 </script>
