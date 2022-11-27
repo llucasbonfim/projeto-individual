@@ -79,8 +79,15 @@ header ul a li {
     margin-left: 5%;
 }
 
-.button {
-    display: flex;
-    margin-left: 47%;
+.button {    
     margin-top: -3%;
+    margin-left: 45%;
+}
+
+button {
+    width: 15vh;
+    height: 5vh;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
 }
