@@ -33,7 +33,7 @@ header ul a li {
 .banner {
     background-color: #343A40;
     width: 100%;
-    height: 80vh;
+    height: 120vh;
 }
 
 .titulo {
@@ -93,5 +93,10 @@ button {
 }
 
 .resultado {
-    
+    width: 20vh;
+    height: 5vh;
+    margin-top: 2%;
+    margin-left: 46%;
+    font-size: large;
+    color: white;
 }
