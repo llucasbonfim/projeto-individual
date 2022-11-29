@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="imagem/png" href="./assets/logo.png">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/json.css">
+    <link rel="stylesheet" href="./css/mapa.css">
     <title>Mapas</title>
 </head>
 <body>
@@ -95,24 +95,23 @@
             lista.push(dados)
         }
         alert(`Dados salvos com sucesso soldado!`)
-        div_mensagem.innerHTML = `Preferências salvas soldado: <br> ${dados.name} <br> ${dados.mapa}`
     }
 
     function sortear() {
         var sorteado = Math.random()
 
         if (sorteado > 0.2) {
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/rust.jpg" width="200px">`
+            div_mensagem.innerHTML = `Mapa sorteado: Rust <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/rust.jpg" width="200px">`
         } else if (sorteado > 0.4) {
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/Crash.webp" width="200px">`
+            div_mensagem.innerHTML = `Mapa sorteado: Crash <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/Crash.webp" width="200px">`
         } else if (sorteado > 0.5) {   
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/Hijacked.webp" width="200px">`
+            div_mensagem.innerHTML = `Mapa sorteado: Hijacked <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/Hijacked.webp" width="200px">`
         } else if (sorteado > 0.7) {
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/shipment.webp" width="200">`
+            div_mensagem.innerHTML = `Mapa sorteado: Shipment <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/shipment.webp" width="200">`
         } else if (sorteado > 0.8){
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/shoot.webp" width="200px">`
+            div_mensagem.innerHTML = `Mapa sorteado: Shoot House <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/shoot.webp" width="200px">`
         } else {
-            div_mensagem.innerHTML = `Mapa sorteado: <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/nuketon.jpg" width="200px">`
+            div_mensagem.innerHTML = `Mapa sorteado: Nuketown <br> <img src="file:///C:/Users/lucas/OneDrive/%C3%81rea%20de%20Trabalho/projeto-individual/site/public/assets/nuketon.jpg" width="200px">`
         }
     }
 </script>
