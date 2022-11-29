@@ -32,11 +32,11 @@
         <div class="campos">
             <div class="campo">
                 <label for="">Digite seu nick no jogo:</label>
-                <input type="text" id="name"> 
+                <input type="text" id="in_name"> 
             </div>
             <div class="campo">
                 <label for="">Digite seu mapa de preferência:</label>
-                <input type="text" id="mapa">
+                <input type="text" id="in_mapa">
             </div>
         </div>
         <div class="button">
@@ -81,8 +81,8 @@
     var lista = [] 
 
     function enviar() {
-        var name = name.value;
-        var mapa = mapa.value;
+        var name = in_name.value;
+        var mapa = in_mapa.value;
 
         if (name == "" || mapa == "") {
             alert(`Preencha todos os campos!`)
