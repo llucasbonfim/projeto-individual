@@ -29,13 +29,24 @@
         <div class="titulo">
             <h1>Descubra seu Rank!</h1>
         </div>
-        <div class="campo">
-            <label for="">Digite seu nick no jogo:</label>
-            <input type="text" id="nick"> 
+        <div class="campos">
+            <div class="campo">
+                <label for="">Digite seu nick no jogo:</label>
+                <input type="text" id="name"> 
+            </div>
+            <div class="campo">
+                <label for="">Digite seu mapa de preferência:</label>
+                <input type="text" id="mapa">
+            </div>
         </div>
-        <div class="campo">
-            <label for="">Digite seu mapa de preferência:</label>
-            <input type="text" id="mapa">
+        <div class="button">
+            <button onclick="enviar()">Enviar</button>
+        </div>
+        <div class="button2">
+            <button onclick="sortear()">Sortear</button>
+        </div>
+        <div class="mensagem">
+            <div id="div_mensagem"></div>
         </div>
     </div>
 
@@ -66,3 +77,27 @@
     </div>
 </body>
 </html>
+<script>
+    var lista = [] 
+
+    function enviar() {
+        var name = name.value;
+        var mapa = mapa.value;
+
+        if (name == "" || mapa == "") {
+            alert(`Preencha todos os campos!`)
+        } else {
+            var dados = {
+                name: name,
+                mapa: mapa,
+            }
+            lista.push(dados)
+        }
+        alert(`Dados salvos com sucesso soldado!`)
+        div_mensagem.innerHTML = `Preferências salvas soldado: <br> ${dados.name} <br> ${dados.mapa}`
+    }
+
+    function sortear() {
+
+    }
+</script>
